@@ -206,6 +206,14 @@ Use Swagger UI or Postman to inspect and test the API endpoints implemented by t
 
 Exact routes, HTTP methods, request bodies, and authorization requirements should be verified in Swagger UI and the source code.
 
+## API Screenshots
+
+### Swagger UI
+![Swagger UI](screenshots/swagger-ui.png)
+
+### Successful Money Transfer (Postman)
+![Postman Transfer API](screenshots/postman-transfer.png)
+
 ## Database
 
 The application uses MySQL for persistent storage. Database tables are managed through the application's JPA entity and configuration setup.
