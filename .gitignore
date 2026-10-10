@@ -37,3 +37,6 @@ target/
 
 # Local logs
 *.log
+
+# Temporary README backup
+README.before-fullstack-update.bak
