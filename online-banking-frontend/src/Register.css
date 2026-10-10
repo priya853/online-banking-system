@@ -1,0 +1,320 @@
+.register-page {
+  min-height: 100vh;
+  background: #fff5df;
+  color: #3f241b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.register-header {
+  min-height: 68px;
+  background: #fff0cf;
+  border-bottom: 3px solid #7d1007;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5%;
+
+  box-shadow: 0 2px 6px rgba(80, 30, 10, 0.12);
+}
+
+.register-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #7d1007;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.register-logo span {
+  font-size: 25px;
+}
+
+.register-header-text {
+  color: #6c4737;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Main */
+.register-main {
+  width: min(620px, 92%);
+  margin: 45px auto;
+}
+
+/* Title */
+.register-title-bar {
+  background: #7d1007;
+  color: #ffffff;
+
+  padding: 13px 18px;
+
+  border-radius: 5px 5px 0 0;
+}
+
+.register-title-bar h1 {
+  margin: 0;
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.register-title-bar p {
+  margin: 4px 0 0;
+  color: #ffffff;
+
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Card */
+.register-card {
+  background: #fffaf0;
+
+  border: 1px solid #dfc7a4;
+  border-top: none;
+
+  padding: 28px;
+
+  box-shadow: 0 5px 15px rgba(80, 30, 10, 0.12);
+}
+
+.register-card-heading {
+  margin-bottom: 22px;
+}
+
+.register-card-heading h2 {
+  margin: 0 0 5px;
+
+  color: #7d1007;
+  font-size: 18px;
+}
+
+.register-card-heading p {
+  margin: 0;
+
+  color: #76594c;
+  font-size: 12px;
+}
+
+/* Fields */
+.register-field {
+  margin-bottom: 17px;
+}
+
+.register-field label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #7d1007;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.register-field input {
+  display: block;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #cba97b;
+  border-radius: 3px;
+
+  color: #3f241b;
+
+  font-size: 13px;
+
+  outline: none;
+}
+
+.register-field input:focus {
+  border-color: #7d1007;
+
+  box-shadow: 0 0 0 2px rgba(125, 16, 7, 0.1);
+}
+
+/* Button */
+.register-button {
+  display: block;
+
+  width: 100%;
+
+  padding: 11px;
+
+  margin-top: 4px;
+
+  border: none;
+  border-radius: 3px;
+
+  background: #7d1007;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background: #5f0c05;
+}
+
+.register-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Error */
+.register-error {
+  margin-bottom: 16px;
+
+  padding: 10px 12px;
+
+  background: #fae1df;
+
+  border: 1px solid #e0aaa6;
+  border-radius: 3px;
+
+  color: #941d14;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Success */
+.register-success {
+  margin-bottom: 16px;
+
+  padding: 10px 12px;
+
+  background: #e4f3e4;
+
+  border: 1px solid #a9d6a9;
+  border-radius: 3px;
+
+  color: #216421;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Login link */
+.register-login-link {
+  margin-top: 18px;
+
+  text-align: center;
+
+  color: #6b5145;
+
+  font-size: 12px;
+}
+
+.register-login-link a {
+  color: #7d1007;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.register-login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Security */
+.register-security {
+  margin-top: 22px;
+
+  padding: 12px;
+
+  background: #fff2d7;
+
+  border: 1px solid #dfc7a4;
+  border-radius: 3px;
+}
+
+.register-security strong {
+  color: #7d1007;
+  font-size: 11px;
+}
+
+.register-security p {
+  margin: 5px 0 0;
+
+  color: #6b5145;
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Footer */
+.register-footer {
+  padding: 14px;
+
+  background: #5b0c06;
+  color: #f9e7c7;
+
+  text-align: center;
+
+  font-size: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .register-header {
+    padding: 12px 4%;
+
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .register-main {
+    margin: 30px auto;
+  }
+
+  .register-card {
+    padding: 18px;
+  }
+}
+/* Final Register form polish */
+.register-field .register-field-hint {
+  display: block !important;
+  margin-top: 5px !important;
+  color: #9b7d6b !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+.register-field label {
+  font-size: 12px !important;
+  margin-bottom: 7px !important;
+}
+
+.register-field {
+  margin-bottom: 16px !important;
+}
+
+.register-card-heading p {
+  font-size: 13px !important;
+}
+
+.register-card-heading h2 {
+  font-size: 23px !important;
+}
+
+.register-title-bar h1 {
+  font-size: 29px !important;
+}

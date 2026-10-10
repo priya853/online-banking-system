@@ -1,0 +1,594 @@
+.customer-dashboard-content {
+  display: grid;
+  gap: 22px;
+  color: #3f241b;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.customer-dashboard-content .bank-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.customer-dashboard-content .bank-info-card {
+  position: relative;
+  padding: 22px;
+  background: #fffaf0;
+  border: 1px solid #e1cba8;
+  border-radius: 12px;
+  box-shadow: 0 7px 20px rgba(80, 30, 10, 0.07);
+  overflow: hidden;
+}
+
+.customer-dashboard-content .bank-info-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: #7d1007;
+}
+
+.customer-dashboard-content .bank-info-card h3 {
+  margin: 0;
+  color: #79584a;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.customer-dashboard-content .bank-info-card p {
+  margin: 13px 0 0 !important;
+  color: #7d1007 !important;
+  font-size: 25px !important;
+  font-weight: 800 !important;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.customer-dashboard-content .bank-success,
+.customer-dashboard-content .bank-error {
+  padding: 13px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.customer-dashboard-content .bank-success {
+  background: #edf9f0;
+  border: 1px solid #b8dfc0;
+  color: #1e6f32;
+}
+
+.customer-dashboard-content .bank-error {
+  background: #fae4e2;
+  border: 1px solid #e0aaa5;
+  color: #9a2119;
+}
+
+/* =========================
+   PANELS
+========================= */
+
+.customer-dashboard-content .bank-panel {
+  background: #fffaf0;
+  border: 1px solid #e1cba8;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 7px 20px rgba(80, 30, 10, 0.06);
+}
+
+.customer-dashboard-content .bank-section-title {
+  margin: 0 0 19px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #ead9bd;
+  color: #7d1007;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+/* =========================
+   DEPOSIT / WITHDRAW
+========================= */
+
+.customer-dashboard-content .bank-action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.customer-dashboard-content .bank-field {
+  margin-bottom: 15px;
+}
+
+.customer-dashboard-content .bank-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #6d493a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.customer-dashboard-content .bank-field input,
+.customer-dashboard-content .bank-field select {
+  width: 100%;
+  height: 45px;
+  padding: 0 12px;
+  border: 1px solid #cdb28a;
+  border-radius: 7px;
+  background: #fff;
+  color: #3f241b;
+  font-size: 14px;
+  outline: none;
+}
+
+.customer-dashboard-content .bank-field input:focus,
+.customer-dashboard-content .bank-field select:focus {
+  border-color: #7d1007;
+  box-shadow: 0 0 0 3px rgba(125, 16, 7, 0.08);
+}
+
+.customer-dashboard-content .bank-button-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.customer-dashboard-content .bank-button {
+  min-width: 125px;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #7d1007;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.customer-dashboard-content .bank-button:hover:not(:disabled) {
+  background: #5f0c05;
+  transform: translateY(-1px);
+}
+
+.customer-dashboard-content .bank-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   TRANSFER
+========================= */
+
+.customer-dashboard-content .bank-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.customer-dashboard-content .bank-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e4d4ba;
+  border-radius: 9px;
+}
+
+.customer-dashboard-content .bank-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.customer-dashboard-content .bank-table th {
+  padding: 13px 12px;
+  background: #f7ecd8;
+  color: #6d493a;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid #dfc7a4;
+}
+
+.customer-dashboard-content .bank-table td {
+  padding: 13px 12px;
+  color: #4a342b;
+  font-size: 12px;
+  border-bottom: 1px solid #eee2cf;
+}
+
+.customer-dashboard-content .bank-table tbody tr:hover {
+  background: #fffaf1;
+}
+
+.customer-dashboard-content .bank-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.customer-dashboard-content .bank-status.active {
+  background: #e9f7ec;
+  color: #26733a;
+}
+
+.customer-dashboard-content .bank-status.blocked {
+  background: #fae3e0;
+  color: #9b271e;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.customer-dashboard-content .empty-state {
+  padding: 30px 15px;
+  text-align: center;
+  color: #866e61;
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .customer-dashboard-content .bank-info-grid,
+  .customer-dashboard-content .bank-action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-dashboard-content .bank-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .customer-dashboard-content .bank-panel {
+    padding: 18px;
+  }
+
+  .customer-dashboard-content .bank-info-card {
+    padding: 18px;
+  }
+
+  .customer-dashboard-content .bank-info-card p {
+    font-size: 22px !important;
+  }
+
+  .customer-dashboard-content .bank-section-title {
+    font-size: 17px;
+  }
+}
+/* =========================================
+   FINAL CUSTOMER DASHBOARD POLISH
+========================================= */
+
+.customer-dashboard-content {
+  gap: 24px;
+}
+
+/* Summary cards */
+.customer-dashboard-content .bank-info-card {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 5px solid #8f1d1d;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.customer-dashboard-content .bank-info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(80, 30, 10, 0.11);
+}
+
+.customer-dashboard-content .bank-info-card p {
+  letter-spacing: 0.2px;
+}
+
+/* Main panels */
+.customer-dashboard-content .bank-panel {
+  border-radius: 16px;
+  padding: 26px;
+  border-color: #eadbca;
+  background: #fffaf3;
+}
+
+/* Section headings */
+.customer-dashboard-content .bank-section-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #591616;
+  font-size: 20px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.customer-dashboard-content .bank-section-title::before {
+  content: "";
+  width: 5px;
+  height: 22px;
+  border-radius: 5px;
+  background: #8f1d1d;
+  display: inline-block;
+}
+
+/* Deposit / Withdraw cards */
+.customer-dashboard-content .bank-action-grid .bank-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.customer-dashboard-content .bank-action-grid .bank-panel::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  top: -35px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(143, 29, 29, 0.045);
+}
+
+.customer-dashboard-content .bank-action-grid .bank-panel:first-child {
+  border-top: 5px solid #2f7b45;
+}
+
+.customer-dashboard-content .bank-action-grid .bank-panel:last-child {
+  border-top: 5px solid #8f1d1d;
+}
+
+/* Inputs and selects */
+.customer-dashboard-content .bank-field input,
+.customer-dashboard-content .bank-field select {
+  min-height: 47px;
+  border-radius: 10px;
+  border-color: #d8c2ad;
+  background: #fff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.customer-dashboard-content .bank-field input:hover,
+.customer-dashboard-content .bank-field select:hover {
+  border-color: #b99b81;
+}
+
+.customer-dashboard-content .bank-field input:focus,
+.customer-dashboard-content .bank-field select:focus {
+  border-color: #8f1d1d;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(143, 29, 29, 0.09);
+}
+
+/* Transfer panel */
+.customer-dashboard-content .bank-panel:has(.bank-form-grid) {
+  border-top: 5px solid #8f1d1d;
+}
+
+.customer-dashboard-content .bank-form-grid {
+  gap: 18px;
+}
+
+/* Buttons */
+.customer-dashboard-content .bank-button {
+  min-height: 44px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8f1d1d, #a62a2a);
+  box-shadow: 0 7px 15px rgba(95, 20, 20, 0.14);
+}
+
+.customer-dashboard-content .bank-button:hover:not(:disabled) {
+  background: #741515;
+  box-shadow: 0 9px 18px rgba(95, 20, 20, 0.18);
+}
+
+/* Success / error */
+.customer-dashboard-content .bank-success,
+.customer-dashboard-content .bank-error {
+  border-radius: 11px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 12px rgba(60, 30, 10, 0.04);
+}
+
+/* Tables */
+.customer-dashboard-content .bank-table-wrapper {
+  border-radius: 12px;
+  border-color: #eadbca;
+  box-shadow: 0 5px 15px rgba(65, 37, 20, 0.04);
+}
+
+.customer-dashboard-content .bank-table {
+  min-width: 700px;
+}
+
+.customer-dashboard-content .bank-table th {
+  background: #f4e7db;
+  color: #6d4634;
+  padding: 14px 13px;
+}
+
+.customer-dashboard-content .bank-table td {
+  padding: 14px 13px;
+}
+
+.customer-dashboard-content .bank-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.customer-dashboard-content .bank-table tbody tr:hover {
+  background: #fff6ee;
+}
+
+/* Status badges */
+.customer-dashboard-content .bank-status {
+  padding: 6px 10px;
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+/* Account and transaction panels */
+.customer-dashboard-content .bank-panel:has(.bank-table) {
+  overflow: hidden;
+}
+
+/* Empty state */
+.customer-dashboard-content .empty-state {
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fbf3eb;
+  border: 1px dashed #d9c2ae;
+  border-radius: 11px;
+  color: #8b7060;
+}
+
+/* Mobile polish */
+@media (max-width: 900px) {
+  .customer-dashboard-content .bank-panel {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .customer-dashboard-content {
+    gap: 18px;
+  }
+
+  .customer-dashboard-content .bank-panel {
+    padding: 18px;
+    border-radius: 13px;
+  }
+
+  .customer-dashboard-content .bank-section-title {
+    font-size: 18px;
+  }
+
+  .customer-dashboard-content .bank-button-row {
+    width: 100%;
+  }
+
+  .customer-dashboard-content .bank-button {
+    width: 100%;
+  }
+}
+
+/* Final customer dashboard polish */
+.customer-dashboard-content {
+  gap: 24px;
+}
+
+.customer-dashboard-content .bank-info-card {
+  min-height: 125px;
+  border-top: 5px solid #8f1d1d;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.customer-dashboard-content .bank-info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(80, 30, 10, 0.11);
+}
+
+.customer-dashboard-content .bank-panel {
+  background: #fffaf3;
+  border-color: #eadbca;
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.customer-dashboard-content .bank-section-title {
+  color: #591616;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.customer-dashboard-content .bank-section-title::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 21px;
+  margin-right: 9px;
+  border-radius: 5px;
+  background: #8f1d1d;
+  vertical-align: middle;
+}
+
+.customer-dashboard-content .bank-field input,
+.customer-dashboard-content .bank-field select {
+  min-height: 47px;
+  border-radius: 10px;
+  border-color: #d8c2ad;
+}
+
+.customer-dashboard-content .bank-field input:focus,
+.customer-dashboard-content .bank-field select:focus {
+  border-color: #8f1d1d;
+  box-shadow: 0 0 0 3px rgba(143, 29, 29, 0.09);
+}
+
+.customer-dashboard-content .bank-button {
+  min-height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8f1d1d, #a62a2a);
+  box-shadow: 0 7px 15px rgba(95, 20, 20, 0.14);
+}
+
+.customer-dashboard-content .bank-button:hover:not(:disabled) {
+  background: #741515;
+}
+
+.customer-dashboard-content .bank-table-wrapper {
+  border-radius: 12px;
+  border-color: #eadbca;
+}
+
+.customer-dashboard-content .bank-table th {
+  background: #f4e7db;
+  color: #6d4634;
+}
+
+.customer-dashboard-content .bank-table tbody tr:hover {
+  background: #fff6ee;
+}
+
+@media (max-width: 900px) {
+  .customer-dashboard-content .bank-info-grid,
+  .customer-dashboard-content .bank-action-grid,
+  .customer-dashboard-content .bank-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .customer-dashboard-content .bank-panel {
+    padding: 18px;
+  }
+
+  .customer-dashboard-content .bank-button {
+    width: 100%;
+  }
+}

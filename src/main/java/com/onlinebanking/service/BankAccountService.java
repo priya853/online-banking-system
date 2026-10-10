@@ -31,11 +31,32 @@ public class BankAccountService {
         this.transactionRepository = transactionRepository;
     }
 
-    // Create new bank account
+    // Create new bank account for logged-in user
     public BankAccount createAccount(String loggedInEmail) {
 
         User user = userRepository
                 .findByEmail(loggedInEmail)
+                .orElseThrow(() ->
+                        new RuntimeException("User not found"));
+
+        BankAccount account = new BankAccount();
+
+        account.setAccountNumber(
+                generateAccountNumber()
+        );
+
+        account.setBalance(BigDecimal.ZERO);
+        account.setUser(user);
+
+        return bankAccountRepository.save(account);
+    }
+
+    // Create new bank account for a specific customer
+    // Used by Admin
+    public BankAccount createAccountForUser(Long userId) {
+
+        User user = userRepository
+                .findById(userId)
                 .orElseThrow(() ->
                         new RuntimeException("User not found"));
 
@@ -98,6 +119,12 @@ public class BankAccountService {
 
         return bankAccountRepository
                 .findByUser(loggedInUser);
+    }
+
+    // Get all bank accounts for Admin
+    public List<BankAccount> getAllAccountsForAdmin() {
+
+        return bankAccountRepository.findAll();
     }
 
     // Deposit money

@@ -1,0 +1,233 @@
+﻿.bank-dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-bottom: 30px;
+}
+
+.bank-dashboard-error {
+  background: #fff0f0;
+  border: 1px solid #d7a2a2;
+  color: #8f1d1d;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bank-dashboard-welcome {
+  background: linear-gradient(135deg, #7d1717 0%, #a62a2a 100%);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 28px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 12px 28px rgba(95, 20, 20, 0.14);
+}
+
+.bank-dashboard-welcome h2 {
+  margin: 6px 0 8px;
+  font-size: 28px;
+  color: #ffffff !important;
+}
+
+.bank-dashboard-welcome p {
+  margin: 0;
+  color: #f8dddd;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+.bank-dashboard-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: #f4caca;
+}
+
+.bank-dashboard-status {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bank-status-dot {
+  width: 9px;
+  height: 9px;
+  background: #8df0a3;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 4px rgba(141, 240, 163, 0.12);
+}
+
+.bank-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.bank-dashboard-card {
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-top: 5px solid #8f1d1d;
+  border-radius: 16px;
+  padding: 22px;
+  min-height: 175px;
+  box-shadow: 0 8px 22px rgba(65, 37, 20, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bank-dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(65, 37, 20, 0.11);
+}
+
+.bank-dashboard-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bank-dashboard-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #f5e4d7;
+  color: #8f1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.bank-dashboard-label {
+  color: #9b7660;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.bank-dashboard-card h3 {
+  margin: 22px 0 5px;
+  color: #591616;
+  font-size: 31px;
+  line-height: 1;
+}
+
+.bank-dashboard-card p {
+  margin: 0;
+  color: #876f60;
+  font-size: 13px;
+}
+
+.bank-dashboard-balance-panel {
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-left: 6px solid #8f1d1d;
+  border-radius: 18px;
+  padding: 28px 30px;
+  box-shadow: 0 8px 22px rgba(65, 37, 20, 0.07);
+}
+
+.bank-balance-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.bank-dashboard-balance-panel .bank-dashboard-eyebrow {
+  color: #9b7660;
+}
+
+.bank-dashboard-balance-panel h2 {
+  margin: 8px 0 8px;
+  color: #591616 !important;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.bank-dashboard-balance-panel p {
+  margin: 0;
+  color: #876f60;
+  font-size: 14px;
+}
+
+.bank-balance-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #edf8ef;
+  color: #25653a;
+  border: 1px solid #c8e6cf;
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.bank-balance-badge span {
+  font-size: 15px;
+}
+
+.bank-dashboard-footer-note {
+  background: #f7eee5;
+  border: 1px solid #eadbca;
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #775c4d;
+  font-size: 13px;
+}
+
+.bank-dashboard-footer-note strong {
+  color: #7d1717;
+}
+
+@media (max-width: 900px) {
+  .bank-dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-dashboard-welcome,
+  .bank-balance-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bank-dashboard-status,
+  .bank-balance-badge {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .bank-dashboard-welcome,
+  .bank-dashboard-balance-panel {
+    padding: 22px;
+  }
+
+  .bank-dashboard-welcome h2 {
+    font-size: 23px;
+  }
+
+  .bank-dashboard-balance-panel h2 {
+    font-size: 29px;
+  }
+}

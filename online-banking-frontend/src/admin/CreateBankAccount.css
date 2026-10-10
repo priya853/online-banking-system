@@ -1,0 +1,337 @@
+.create-account-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.create-account-header {
+  background: linear-gradient(135deg, #7d1717 0%, #a62a2a 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 27px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 12px 28px rgba(95, 20, 20, 0.14);
+}
+
+.create-account-eyebrow {
+  display: inline-block;
+  color: #f3caca;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.create-account-header h2 {
+  margin: 6px 0 7px;
+  color: #fff !important;
+  font-size: 27px;
+}
+
+.create-account-header p {
+  margin: 0;
+  color: #f7dddd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.create-account-badge {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.create-account-card {
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-top: 5px solid #8f1d1d;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 24px rgba(65, 37, 20, 0.07);
+}
+
+.create-account-card-heading {
+  margin-bottom: 22px;
+}
+
+.create-account-card-heading > span {
+  color: #9b7660;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.create-account-card-heading h3 {
+  margin: 6px 0 7px;
+  color: #591616;
+  font-size: 23px;
+}
+
+.create-account-card-heading p {
+  margin: 0;
+  color: #806656;
+  font-size: 13px;
+}
+
+.create-account-message {
+  margin-bottom: 18px;
+  padding: 13px 15px;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 13px;
+}
+
+.create-account-message strong {
+  font-size: 12px;
+}
+
+.create-account-message span {
+  line-height: 1.5;
+}
+
+.create-account-success {
+  background: #edf8ef;
+  border: 1px solid #c9e6d1;
+  border-left: 5px solid #2f7b45;
+  color: #25653a;
+}
+
+.create-account-error {
+  background: #fff0f0;
+  border: 1px solid #e1b6b6;
+  border-left: 5px solid #a62a2a;
+  color: #8f1d1d;
+}
+
+.create-account-field {
+  margin-bottom: 19px;
+}
+
+.create-account-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #684535;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.create-account-field select {
+  width: 100%;
+  min-height: 47px;
+  box-sizing: border-box;
+  padding: 11px 13px;
+  border: 1px solid #d8c2ad;
+  border-radius: 10px;
+  background: #fff;
+  color: #4d3022;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.create-account-field select:focus {
+  border-color: #8f1d1d;
+  box-shadow: 0 0 0 3px rgba(143, 29, 29, 0.1);
+}
+
+.create-account-field select:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.create-account-hint {
+  display: block;
+  margin-top: 6px;
+  color: #9b7d6b;
+  font-size: 11px;
+}
+
+.create-account-selected {
+  margin-top: 20px;
+  margin-bottom: 22px;
+  padding: 20px;
+  background: #f8eee4;
+  border: 1px solid #eadbca;
+  border-left: 5px solid #8f1d1d;
+  border-radius: 14px;
+}
+
+.create-account-selected-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 17px;
+}
+
+.create-account-selected-header > div:first-child > span {
+  color: #9b7660;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.create-account-selected-header h3 {
+  margin: 5px 0 0;
+  color: #591616;
+  font-size: 19px;
+}
+
+.create-account-customer-id {
+  background: #8f1d1d;
+  color: #fff;
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.create-account-customer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.create-account-customer-grid > div {
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.create-account-customer-grid span {
+  display: block;
+  color: #987762;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.create-account-customer-grid strong {
+  display: block;
+  color: #572c1f;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.create-account-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.create-account-primary,
+.create-account-secondary {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.create-account-primary {
+  flex: 1;
+  border: none;
+  background: linear-gradient(135deg, #8f1d1d, #a62a2a);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(95, 20, 20, 0.16);
+}
+
+.create-account-primary:hover:not(:disabled) {
+  background: #741515;
+}
+
+.create-account-secondary {
+  min-width: 110px;
+  border: 1px solid #cdb7a2;
+  background: #fff;
+  color: #6d4634;
+}
+
+.create-account-secondary:hover:not(:disabled) {
+  background: #f5ebe1;
+}
+
+.create-account-primary:disabled,
+.create-account-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.create-account-security {
+  margin-top: 24px;
+  padding: 14px 15px;
+  background: #f7eee5;
+  border: 1px solid #eadbca;
+  border-radius: 11px;
+}
+
+.create-account-security strong {
+  display: block;
+  color: #721414;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.create-account-security p {
+  margin: 0;
+  color: #806656;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+  .create-account-customer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .create-account-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .create-account-badge {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .create-account-header {
+    padding: 22px;
+  }
+
+  .create-account-header h2 {
+    font-size: 23px;
+  }
+
+  .create-account-card {
+    padding: 20px;
+  }
+
+  .create-account-selected-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .create-account-actions {
+    flex-direction: column;
+  }
+
+  .create-account-primary,
+  .create-account-secondary {
+    width: 100%;
+  }
+}

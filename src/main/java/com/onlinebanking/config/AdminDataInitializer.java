@@ -13,7 +13,7 @@ public class AdminDataInitializer implements CommandLineRunner {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    @Value("${ADMIN_PASSWORD}")
+    @Value("${admin.password}")
     private String adminPassword;
 
     public AdminDataInitializer(
@@ -29,13 +29,32 @@ public class AdminDataInitializer implements CommandLineRunner {
 
         String adminEmail = "admin@onlinebanking.com";
 
-        // Check whether admin already exists
+        User admin;
+
         if (userRepository.findByEmail(adminEmail).isEmpty()) {
 
-            User admin = new User();
+            admin = new User();
 
             admin.setName("Admin User");
             admin.setEmail(adminEmail);
+            admin.setRole("ROLE_ADMIN");
+            admin.setStatus("ACTIVE");
+
+            admin.setPassword(
+                    passwordEncoder.encode(adminPassword)
+            );
+
+            userRepository.save(admin);
+
+            System.out.println(
+                    "Admin user created successfully!"
+            );
+
+        } else {
+
+            admin = userRepository
+                    .findByEmail(adminEmail)
+                    .orElseThrow();
 
             admin.setPassword(
                     passwordEncoder.encode(adminPassword)
@@ -47,13 +66,7 @@ public class AdminDataInitializer implements CommandLineRunner {
             userRepository.save(admin);
 
             System.out.println(
-                    "Admin user created successfully!"
-            );
-
-        } else {
-
-            System.out.println(
-                    "Admin user already exists."
+                    "Admin user password synchronized successfully."
             );
         }
     }

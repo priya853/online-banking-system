@@ -1,0 +1,337 @@
+.bank-accounts-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.bank-accounts-header {
+  background: linear-gradient(135deg, #7d1717 0%, #a62a2a 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 27px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 12px 28px rgba(95, 20, 20, 0.14);
+}
+
+.bank-accounts-eyebrow {
+  display: inline-block;
+  color: #f3caca;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.bank-accounts-header h2 {
+  margin: 6px 0 7px;
+  color: #fff !important;
+  font-size: 27px;
+}
+
+.bank-accounts-header p {
+  margin: 0;
+  color: #f7dddd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bank-accounts-count {
+  min-width: 145px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 14px 18px;
+  text-align: center;
+}
+
+.bank-accounts-count span {
+  display: block;
+  color: #f2cdcd;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.bank-accounts-count strong {
+  display: block;
+  margin-top: 5px;
+  color: #fff;
+  font-size: 28px;
+}
+
+.bank-accounts-toolbar {
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 7px 20px rgba(65, 37, 20, 0.06);
+}
+
+.bank-accounts-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bank-accounts-search-icon {
+  position: absolute;
+  left: 16px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #8f1d1d;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.bank-accounts-search-icon::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 2px;
+  background: #8f1d1d;
+  right: -5px;
+  bottom: -3px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.bank-accounts-search input {
+  width: 100%;
+  padding: 13px 44px 13px 43px;
+  border: 1px solid #dbc6b1;
+  border-radius: 11px;
+  background: #fff;
+  color: #4d3022;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bank-accounts-search input:focus {
+  border-color: #8f1d1d;
+  box-shadow: 0 0 0 3px rgba(143, 29, 29, 0.1);
+}
+
+.bank-accounts-clear {
+  position: absolute;
+  right: 11px;
+  border: none;
+  background: transparent;
+  color: #8d6c59;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.bank-accounts-state {
+  min-height: 170px;
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #765c4c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bank-accounts-spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #eadbca;
+  border-top-color: #8f1d1d;
+  border-radius: 50%;
+  animation: bankAccountsSpin 0.8s linear infinite;
+}
+
+@keyframes bankAccountsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bank-accounts-error {
+  background: #fff0f0;
+  border: 1px solid #e1b6b6;
+  border-left: 5px solid #a62a2a;
+  border-radius: 12px;
+  padding: 15px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bank-accounts-error strong {
+  color: #8f1d1d;
+}
+
+.bank-accounts-error span {
+  color: #75584a;
+  font-size: 13px;
+}
+
+.bank-accounts-table-panel {
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(65, 37, 20, 0.07);
+}
+
+.bank-accounts-table-header {
+  padding: 20px 22px;
+  border-bottom: 1px solid #eadbca;
+}
+
+.bank-accounts-table-header h3 {
+  margin: 0 0 4px;
+  color: #591616;
+  font-size: 18px;
+}
+
+.bank-accounts-table-header span {
+  color: #937766;
+  font-size: 13px;
+}
+
+.bank-accounts-table-wrap {
+  overflow-x: auto;
+}
+
+.bank-accounts-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.bank-accounts-table th {
+  background: #f4e7db;
+  color: #6d4634;
+  padding: 13px 16px;
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+}
+
+.bank-accounts-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee1d4;
+  color: #5f473b;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.bank-accounts-table tbody tr:hover {
+  background: #fff5ec;
+}
+
+.bank-accounts-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.bank-accounts-id {
+  color: #8f1d1d;
+  font-weight: 800;
+}
+
+.bank-account-number {
+  color: #4f3023;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.bank-accounts-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.bank-accounts-avatar {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+  background: #8f1d1d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.bank-accounts-name-cell strong {
+  display: block;
+  color: #4e2c22;
+  font-size: 13px;
+}
+
+.bank-accounts-name-cell span {
+  display: block;
+  margin-top: 2px;
+  color: #987762;
+  font-size: 11px;
+}
+
+.bank-account-balance {
+  display: inline-flex;
+  align-items: center;
+  background: #edf8ef;
+  border: 1px solid #c9e6d1;
+  color: #26733f;
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.bank-accounts-empty {
+  text-align: center;
+  padding: 42px 20px !important;
+}
+
+.bank-accounts-empty div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bank-accounts-empty strong {
+  color: #6e4635;
+  font-size: 14px;
+}
+
+.bank-accounts-empty span {
+  color: #a08472;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .bank-accounts-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bank-accounts-count {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .bank-accounts-header {
+    padding: 22px;
+  }
+
+  .bank-accounts-header h2 {
+    font-size: 23px;
+  }
+}

@@ -27,6 +27,13 @@ public class User {
 
     private String status = "ACTIVE";
 
+    // Bank manager / user details
+    private String phone;
+
+    private String bankName;
+
+    private String branch;
+
     public User() {
     }
 
@@ -38,9 +45,13 @@ public class User {
         this.name = name;
         this.email = email;
         this.password = password;
-        this.role = "ROLE_USER";
+        this.role = "ROLE_CUSTOMER";
         this.status = "ACTIVE";
     }
+
+    // =========================================================
+    // ID
+    // =========================================================
 
     public Long getId() {
         return id;
@@ -50,6 +61,10 @@ public class User {
         this.id = id;
     }
 
+    // =========================================================
+    // NAME
+    // =========================================================
+
     public String getName() {
         return name;
     }
@@ -57,6 +72,10 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+
+    // =========================================================
+    // EMAIL
+    // =========================================================
 
     public String getEmail() {
         return email;
@@ -66,6 +85,10 @@ public class User {
         this.email = email;
     }
 
+    // =========================================================
+    // PASSWORD
+    // =========================================================
+
     public String getPassword() {
         return password;
     }
@@ -73,6 +96,10 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    // =========================================================
+    // ROLE
+    // =========================================================
 
     public String getRole() {
         return role;
@@ -82,11 +109,51 @@ public class User {
         this.role = role;
     }
 
+    // =========================================================
+    // STATUS
+    // =========================================================
+
     public String getStatus() {
         return status;
     }
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    // =========================================================
+    // PHONE
+    // =========================================================
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    // =========================================================
+    // BANK NAME
+    // =========================================================
+
+    public String getBankName() {
+        return bankName;
+    }
+
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
+
+    // =========================================================
+    // BRANCH
+    // =========================================================
+
+    public String getBranch() {
+        return branch;
+    }
+
+    public void setBranch(String branch) {
+        this.branch = branch;
     }
 }

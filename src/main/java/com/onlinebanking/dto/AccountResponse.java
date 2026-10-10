@@ -8,10 +8,30 @@ public class AccountResponse {
     private String accountNumber;
     private BigDecimal balance;
     private Long userId;
+    private String customerName;
+    private String customerEmail;
 
     public AccountResponse() {
     }
 
+    // Constructor used by admin account responses
+    public AccountResponse(
+            Long id,
+            String accountNumber,
+            BigDecimal balance,
+            Long userId,
+            String customerName,
+            String customerEmail) {
+
+        this.id = id;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.userId = userId;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+    }
+
+    // Old constructor kept for compatibility
     public AccountResponse(
             Long id,
             String accountNumber,
@@ -54,5 +74,21 @@ public class AccountResponse {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCustomerEmail() {
+        return customerEmail;
+    }
+
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 }

@@ -7,3 +7,33 @@ target/
 # IntelliJ
 .idea/
 *.iml
+# Local application secrets
+/src/main/resources/application.properties
+**/.env
+**/.env.*
+!**/.env.example
+
+# Local logs and backups
+/startup-error.log
+/backup-admin-registration-/
+*.backup-*
+*.bom-backup-*
+
+# Frontend dependencies and build output
+/online-banking-frontend/node_modules/
+/online-banking-frontend/dist/
+
+# Temporary backup folders
+/backup-admin-registration-*/
+
+# Frontend environment files
+/online-banking-frontend/.env
+/online-banking-frontend/.env.*
+!/online-banking-frontend/.env.example
+
+# Frontend dependencies and generated build
+/online-banking-frontend/node_modules/
+/online-banking-frontend/dist/
+
+# Local logs
+*.log

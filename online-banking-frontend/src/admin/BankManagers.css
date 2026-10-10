@@ -1,0 +1,368 @@
+.bank-managers-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.bank-managers-header {
+  background: linear-gradient(135deg, #7d1717 0%, #a62a2a 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 27px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 12px 28px rgba(95, 20, 20, 0.14);
+}
+
+.bank-managers-eyebrow {
+  display: inline-block;
+  color: #f3caca;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.bank-managers-header h2 {
+  margin: 6px 0 7px;
+  color: #fff !important;
+  font-size: 27px;
+}
+
+.bank-managers-header p {
+  margin: 0;
+  color: #f7dddd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bank-managers-count {
+  min-width: 145px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 14px 18px;
+  text-align: center;
+}
+
+.bank-managers-count span {
+  display: block;
+  color: #f2cdcd;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.bank-managers-count strong {
+  display: block;
+  margin-top: 5px;
+  color: #fff;
+  font-size: 28px;
+}
+
+.bank-managers-toolbar {
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 7px 20px rgba(65, 37, 20, 0.06);
+}
+
+.bank-managers-search {
+  position: relative;
+  flex: 1;
+}
+
+.bank-managers-search input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 45px;
+  padding: 11px 43px;
+  border: 1px solid #dbc6b1;
+  border-radius: 10px;
+  background: #fff;
+  color: #4d3022;
+  font-size: 13px;
+  outline: none;
+}
+
+.bank-managers-search input:focus {
+  border-color: #8f1d1d;
+  box-shadow: 0 0 0 3px rgba(143, 29, 29, 0.1);
+}
+
+.bank-managers-search-icon {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #8f1d1d;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.bank-managers-search-icon::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 2px;
+  background: #8f1d1d;
+  right: -5px;
+  bottom: -3px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.bank-managers-clear-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  color: #8d6c59;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.bank-managers-clear {
+  min-height: 45px;
+  padding: 0 17px;
+  border: 1px solid #cdb7a2;
+  border-radius: 10px;
+  background: #fff;
+  color: #6d4634;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.bank-managers-clear:hover:not(:disabled) {
+  background: #f5ebe1;
+}
+
+.bank-managers-clear:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bank-managers-table-panel {
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(65, 37, 20, 0.07);
+}
+
+.bank-managers-table-header {
+  padding: 20px 22px;
+  border-bottom: 1px solid #eadbca;
+}
+
+.bank-managers-table-header h3 {
+  margin: 0 0 4px;
+  color: #591616;
+  font-size: 18px;
+}
+
+.bank-managers-table-header span {
+  color: #937766;
+  font-size: 13px;
+}
+
+.bank-managers-table-wrap {
+  overflow-x: auto;
+}
+
+.bank-managers-table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+}
+
+.bank-managers-table th {
+  padding: 13px 14px;
+  background: #f4e7db;
+  color: #6d4634;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+}
+
+.bank-managers-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee1d4;
+  color: #5f473b;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.bank-managers-table tbody tr:hover {
+  background: #fff5ec;
+}
+
+.bank-managers-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.bank-managers-index {
+  color: #8d735f;
+  font-weight: 700;
+}
+
+.bank-managers-id {
+  color: #8f1d1d;
+  font-weight: 800;
+}
+
+.bank-managers-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 170px;
+}
+
+.bank-managers-avatar {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+  background: #8f1d1d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.bank-managers-name-cell strong {
+  display: block;
+  color: #4e2c22;
+  font-size: 13px;
+}
+
+.bank-managers-name-cell span {
+  display: block;
+  margin-top: 2px;
+  color: #987762;
+  font-size: 11px;
+}
+
+.bank-managers-role {
+  color: #765340;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.bank-managers-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bank-managers-status.active {
+  background: #eaf7ee;
+  color: #26733f;
+  border: 1px solid #c9e6d1;
+}
+
+.bank-managers-status.blocked {
+  background: #fff0f0;
+  color: #9a2929;
+  border: 1px solid #e5c0c0;
+}
+
+.bank-managers-state {
+  min-height: 160px;
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #765c4c;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 7px 20px rgba(65, 37, 20, 0.05);
+}
+
+.bank-managers-spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #eadbca;
+  border-top-color: #8f1d1d;
+  border-radius: 50%;
+  animation: bankManagersSpin 0.8s linear infinite;
+}
+
+@keyframes bankManagersSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bank-managers-error {
+  background: #fff0f0;
+  border: 1px solid #e1b6b6;
+  border-left: 5px solid #a62a2a;
+  border-radius: 12px;
+  padding: 15px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bank-managers-error strong {
+  color: #8f1d1d;
+}
+
+.bank-managers-error span {
+  color: #75584a;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .bank-managers-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bank-managers-count {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .bank-managers-header {
+    padding: 22px;
+  }
+
+  .bank-managers-header h2 {
+    font-size: 23px;
+  }
+
+  .bank-managers-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bank-managers-clear {
+    width: 100%;
+  }
+}

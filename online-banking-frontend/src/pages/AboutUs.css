@@ -1,0 +1,743 @@
+/* =========================================================
+   PUBLIC BANKING LANDING PAGE
+========================================================= */
+
+.public-bank-page {
+  min-height: 100vh;
+
+  background: #fff4dc;
+
+  color: #4d2f25;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.public-bank-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: #fff0cf;
+
+  border-bottom: 3px solid #8b160d;
+
+  box-shadow:
+    0 2px 8px rgba(80, 35, 20, 0.12);
+}
+
+.public-bank-header-inner {
+  width: 100%;
+  min-height: 78px;
+
+  padding: 12px 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.public-bank-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  white-space: nowrap;
+}
+
+.public-bank-logo-icon {
+  font-size: 29px;
+}
+
+.public-bank-logo-text {
+  color: #8b160d;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.public-bank-nav {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  white-space: nowrap;
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+}
+
+.public-bank-nav::-webkit-scrollbar {
+  height: 5px;
+}
+
+.public-bank-nav::-webkit-scrollbar-thumb {
+  background: #8b160d;
+  border-radius: 10px;
+}
+
+.public-bank-nav a {
+  flex: 0 0 auto;
+
+  padding: 9px 11px;
+
+  color: #5b281e;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  border-radius: 4px;
+}
+
+.public-bank-nav a:hover {
+  background: #f0d9ad;
+  color: #8b160d;
+}
+
+/* =========================================================
+   AUTH BUTTONS
+========================================================= */
+
+.public-bank-auth {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.public-login-button,
+.public-register-button {
+  padding: 10px 18px;
+
+  border-radius: 4px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.public-login-button {
+  border: 1px solid #8b160d;
+
+  background: #8b160d;
+
+  color: #ffffff;
+}
+
+.public-login-button:hover {
+  background: #6f1009;
+}
+
+.public-register-button {
+  border: 1px solid #8b160d;
+
+  background: transparent;
+
+  color: #8b160d;
+}
+
+.public-register-button:hover {
+  background: #8b160d;
+  color: #ffffff;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.public-bank-hero {
+  min-height: 560px;
+
+  background-size: cover;
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+.public-bank-hero-overlay {
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 60px 7%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(80, 38, 24, 0.94) 0%,
+      rgba(80, 38, 24, 0.78) 38%,
+      rgba(80, 38, 24, 0.28) 72%,
+      rgba(80, 38, 24, 0.04) 100%
+    );
+}
+
+.public-bank-hero-content {
+  max-width: 620px;
+
+  color: #ffffff;
+}
+
+.public-bank-small-title {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #f8d8a6;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.public-bank-hero h1 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+.public-bank-hero p {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: #fff4dc;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.public-bank-hero-buttons {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.public-hero-login,
+.public-hero-register {
+  padding: 12px 26px;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.public-hero-login {
+  border: 1px solid #8b160d;
+
+  background: #8b160d;
+
+  color: #ffffff;
+}
+
+.public-hero-login:hover {
+  background: #6f1009;
+}
+
+.public-hero-register {
+  border: 1px solid #ffffff;
+
+  background: transparent;
+
+  color: #ffffff;
+}
+
+.public-hero-register:hover {
+  background: #ffffff;
+  color: #8b160d;
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.public-bank-section {
+  padding: 70px 6%;
+
+  background: #fff4dc;
+}
+
+.public-bank-section-heading {
+  max-width: 760px;
+
+  margin: 0 auto 42px;
+
+  text-align: center;
+}
+
+.public-bank-section-heading span {
+  color: #8b160d;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.public-bank-section-heading h2 {
+  margin: 8px 0 12px;
+
+  color: #6f1009;
+
+  font-size: 34px;
+}
+
+.public-bank-section-heading p {
+  margin: 0;
+
+  color: #665046;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.public-about-grid {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 45px;
+
+  align-items: center;
+}
+
+.public-about-text h3 {
+  margin: 0 0 15px;
+
+  color: #8b160d;
+
+  font-size: 28px;
+}
+
+.public-about-text p {
+  margin-bottom: 14px;
+
+  color: #5b4338;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.public-about-points {
+  margin-top: 22px;
+}
+
+.public-about-points div {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 13px;
+}
+
+.public-about-points strong {
+  color: #7b160d;
+
+  font-size: 14px;
+}
+
+.public-about-points span {
+  margin-top: 3px;
+
+  color: #6a544a;
+
+  font-size: 13px;
+}
+
+.public-about-image {
+  overflow: hidden;
+
+  border-radius: 7px;
+
+  border: 1px solid #d8bd94;
+}
+
+.public-about-image img {
+  display: block;
+
+  width: 100%;
+  height: 370px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.public-bank-services {
+  padding: 70px 6%;
+
+  background: #f7e8c5;
+}
+
+.public-service-grid {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.public-service-card {
+  padding: 25px 20px;
+
+  background: #fff8e9;
+
+  border: 1px solid #dfc59d;
+
+  border-radius: 6px;
+
+  text-align: center;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.public-service-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 6px 14px rgba(100, 50, 25, 0.10);
+}
+
+.public-service-icon {
+  margin-bottom: 12px;
+
+  font-size: 32px;
+}
+
+.public-service-card h3 {
+  margin: 0 0 10px;
+
+  color: #8b160d;
+
+  font-size: 18px;
+}
+
+.public-service-card p {
+  margin: 0;
+
+  color: #665047;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   SUPPORT
+========================================================= */
+
+.public-support-section {
+  padding: 50px 6%;
+
+  background: #8b160d;
+
+  color: #ffffff;
+}
+
+.public-support-content {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.public-support-content span {
+  color: #f8d8a6;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.public-support-content h2 {
+  margin: 8px 0;
+
+  color: #ffffff;
+
+  font-size: 28px;
+}
+
+.public-support-content p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #fff2da;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.public-support-button {
+  flex-shrink: 0;
+
+  padding: 12px 22px;
+
+  background: #fff4dc;
+
+  color: #8b160d;
+
+  border: none;
+
+  border-radius: 4px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.public-support-button:hover {
+  background: #ffffff;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.public-contact-section {
+  padding: 70px 6%;
+
+  background: #fff4dc;
+}
+
+.public-contact-grid {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.public-contact-grid > div {
+  padding: 20px;
+
+  background: #fff8e9;
+
+  border: 1px solid #dfc59d;
+
+  border-radius: 5px;
+
+  text-align: center;
+}
+
+.public-contact-grid strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #8b160d;
+
+  font-size: 14px;
+}
+
+.public-contact-grid span {
+  color: #665047;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.public-bank-footer {
+  padding: 28px 6%;
+
+  background: #5f100a;
+
+  color: #ffffff;
+}
+
+.public-bank-footer-inner {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.public-bank-footer strong {
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+.public-bank-footer p {
+  margin: 5px 0 0;
+
+  color: #f7e7cc;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .public-bank-header-inner {
+    gap: 12px;
+  }
+
+  .public-bank-nav {
+    justify-content: flex-start;
+  }
+
+  .public-service-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .public-contact-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .public-bank-header-inner {
+    flex-wrap: wrap;
+  }
+
+  .public-bank-nav {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .public-bank-hero h1 {
+    font-size: 38px;
+  }
+
+  .public-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .public-support-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .public-bank-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .public-bank-header-inner {
+    padding: 12px 15px;
+  }
+
+  .public-bank-logo-text {
+    font-size: 18px;
+  }
+
+  .public-bank-auth {
+    margin-left: auto;
+  }
+
+  .public-bank-hero,
+  .public-bank-hero-overlay {
+    min-height: 500px;
+  }
+
+  .public-bank-hero-overlay {
+    padding: 35px 20px;
+  }
+
+  .public-bank-hero h1 {
+    font-size: 32px;
+  }
+
+  .public-bank-hero p {
+    font-size: 15px;
+  }
+
+  .public-service-grid,
+  .public-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .public-bank-section-heading h2 {
+    font-size: 28px;
+  }
+
+}

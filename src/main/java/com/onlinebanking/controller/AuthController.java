@@ -1,6 +1,7 @@
 package com.onlinebanking.controller;
-import jakarta.validation.Valid;
+
 import com.onlinebanking.dto.LoginRequest;
+import com.onlinebanking.dto.LoginResponse;
 import com.onlinebanking.entity.User;
 import com.onlinebanking.repository.UserRepository;
 import com.onlinebanking.service.JwtService;
@@ -26,39 +27,30 @@ public class AuthController {
         this.jwtService = jwtService;
     }
 
-    // User login
     @PostMapping("/login")
-    public ResponseEntity<String> login(
+    public ResponseEntity<?> login(
             @RequestBody LoginRequest loginRequest) {
 
-        // Find user by email
         User user = userRepository
                 .findByEmail(loginRequest.getEmail())
                 .orElse(null);
 
-        // Invalid email
         if (user == null) {
             return ResponseEntity
                     .badRequest()
                     .body("Invalid email or password");
         }
 
-        // Check whether user is blocked
         if ("BLOCKED".equalsIgnoreCase(user.getStatus())) {
             return ResponseEntity
                     .status(403)
-                    .body(
-                            "Your account is blocked. " +
-                                    "Please contact the administrator."
-                    );
+                    .body("Your account is blocked. Please contact the administrator.");
         }
 
-        // Check password
-        boolean passwordMatch =
-                passwordEncoder.matches(
-                        loginRequest.getPassword(),
-                        user.getPassword()
-                );
+        boolean passwordMatch = passwordEncoder.matches(
+                loginRequest.getPassword(),
+                user.getPassword()
+        );
 
         if (!passwordMatch) {
             return ResponseEntity
@@ -66,10 +58,14 @@ public class AuthController {
                     .body("Invalid email or password");
         }
 
-        // Generate JWT token
-        String token =
-                jwtService.generateToken(user.getEmail());
+        String token = jwtService.generateToken(user.getEmail());
 
-        return ResponseEntity.ok(token);
+        return ResponseEntity.ok(
+                new LoginResponse(
+                        token,
+                        user.getRole(),
+                        user.getName()
+                )
+        );
     }
 }

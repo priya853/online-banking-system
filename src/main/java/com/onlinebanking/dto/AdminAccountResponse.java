@@ -8,8 +8,8 @@ public class AdminAccountResponse {
     private String accountNumber;
     private BigDecimal balance;
     private Long userId;
-    private String userName;
-    private String userEmail;
+    private String customerName;
+    private String customerEmail;
 
     public AdminAccountResponse() {
     }
@@ -19,15 +19,15 @@ public class AdminAccountResponse {
             String accountNumber,
             BigDecimal balance,
             Long userId,
-            String userName,
-            String userEmail) {
+            String customerName,
+            String customerEmail) {
 
         this.id = id;
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.userId = userId;
-        this.userName = userName;
-        this.userEmail = userEmail;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
     }
 
     public Long getId() {
@@ -62,19 +62,19 @@ public class AdminAccountResponse {
         this.userId = userId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 }

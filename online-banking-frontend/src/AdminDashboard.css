@@ -1,0 +1,261 @@
+.admin-dashboard-content {
+  display: grid;
+  gap: 22px;
+  color: #3f241b;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.admin-dashboard-content .bank-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admin-dashboard-content .bank-info-card {
+  position: relative;
+  padding: 22px;
+  background: #fffaf0;
+  border: 1px solid #e1cba8;
+  border-radius: 12px;
+  box-shadow: 0 7px 20px rgba(80, 30, 10, 0.06);
+  overflow: hidden;
+}
+
+.admin-dashboard-content .bank-info-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: #7d1007;
+}
+
+.admin-dashboard-content .bank-info-card h3 {
+  margin: 0;
+  color: #79584a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.admin-dashboard-content .bank-info-card > p {
+  margin: 12px 0 0;
+  color: #7d1007;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.admin-dashboard-content .bank-info-card > p:first-of-type {
+  color: #7d1007 !important;
+}
+
+/* Quick action descriptions */
+
+.admin-dashboard-content .bank-info-card .bank-button-row {
+  margin-top: 15px;
+}
+
+.admin-dashboard-content .bank-info-card .bank-button {
+  display: inline-block;
+  min-width: 85px;
+  padding: 9px 15px;
+  border: none;
+  border-radius: 7px;
+  background: #7d1007;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.admin-dashboard-content .bank-info-card .bank-button:hover {
+  background: #5f0c05;
+  transform: translateY(-1px);
+}
+
+/* Quick administration cards */
+.admin-dashboard-content .bank-panel:nth-of-type(2) .bank-info-card {
+  min-height: 145px;
+}
+
+.admin-dashboard-content .bank-panel:nth-of-type(2) .bank-info-card p {
+  margin: 8px 0 0;
+  color: #76594c !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1.6;
+}
+
+/* =========================
+   PANELS
+========================= */
+
+.admin-dashboard-content .bank-panel {
+  background: #fffaf0;
+  border: 1px solid #e1cba8;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 7px 20px rgba(80, 30, 10, 0.05);
+}
+
+.admin-dashboard-content .bank-section-title {
+  margin: 0 0 20px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #ead9bd;
+  color: #7d1007;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.admin-dashboard-content .bank-error {
+  margin-bottom: 16px;
+  padding: 12px 15px;
+  background: #fae4e2;
+  border: 1px solid #e0aaa5;
+  border-radius: 8px;
+  color: #9a2119;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.admin-dashboard-content .bank-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e3d4bc;
+  border-radius: 9px;
+}
+
+.admin-dashboard-content .bank-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.admin-dashboard-content .bank-table th {
+  padding: 13px 12px;
+  background: #f7ecd8;
+  color: #6d493a;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid #dfc7a4;
+}
+
+.admin-dashboard-content .bank-table td {
+  padding: 13px 12px;
+  color: #4a342b;
+  font-size: 12px;
+  border-bottom: 1px solid #eee2cf;
+}
+
+.admin-dashboard-content .bank-table tbody tr:hover {
+  background: #fffaf1;
+}
+
+.admin-dashboard-content .bank-table .bank-button {
+  min-width: 82px;
+  padding: 7px 11px;
+  border: none;
+  border-radius: 6px;
+  background: #7d1007;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-dashboard-content .bank-table .bank-button:hover {
+  background: #5f0c05;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.admin-dashboard-content .bank-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.admin-dashboard-content .bank-status.active {
+  background: #e8f5eb;
+  color: #267039;
+}
+
+.admin-dashboard-content .bank-status.blocked {
+  background: #fae3e0;
+  color: #9a281e;
+}
+
+/* =========================
+   BUTTON ROW
+========================= */
+
+.admin-dashboard-content .bank-button-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 17px;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.admin-dashboard-content .empty-state {
+  padding: 30px 15px;
+  text-align: center;
+  color: #866e61;
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+  .admin-dashboard-content .bank-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-dashboard-content .bank-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard-content .bank-panel {
+    padding: 18px;
+  }
+
+  .admin-dashboard-content .bank-section-title {
+    font-size: 17px;
+  }
+
+  .admin-dashboard-content .bank-info-card {
+    padding: 18px;
+  }
+}
+/* Final heading visibility fix */
+.admin-dashboard-content h2 {
+    color: #fff !important;
+}

@@ -35,7 +35,7 @@ public class UserService {
         if (user.getRole() == null ||
                 user.getRole().isBlank()) {
 
-            user.setRole("ROLE_USER");
+            user.setRole("ROLE_CUSTOMER");
         }
 
         // Default status
@@ -105,6 +105,11 @@ public class UserService {
 
         existingUser.setEmail(
                 updatedUser.getEmail()
+        );
+
+        // Update phone number
+        existingUser.setPhone(
+                updatedUser.getPhone()
         );
 
         // Update password only if provided

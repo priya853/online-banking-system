@@ -1,0 +1,256 @@
+.register-manager-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.register-manager-header {
+  background: linear-gradient(135deg, #7d1717 0%, #a62a2a 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 27px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 12px 28px rgba(95, 20, 20, 0.14);
+}
+
+.register-manager-eyebrow {
+  display: inline-block;
+  color: #f3caca;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.register-manager-header h2 {
+  margin: 6px 0 7px;
+  color: #fff !important;
+  font-size: 27px;
+}
+
+.register-manager-header p {
+  margin: 0;
+  color: #f7dddd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.register-manager-badge {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.register-manager-card {
+  background: #fffaf3;
+  border: 1px solid #eadbca;
+  border-top: 5px solid #8f1d1d;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 24px rgba(65, 37, 20, 0.07);
+}
+
+.register-manager-card-heading {
+  margin-bottom: 22px;
+}
+
+.register-manager-card-heading > span {
+  color: #9b7660;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.register-manager-card-heading h3 {
+  margin: 6px 0 7px;
+  color: #591616;
+  font-size: 23px;
+}
+
+.register-manager-card-heading p {
+  margin: 0;
+  color: #806656;
+  font-size: 13px;
+}
+
+.register-manager-message {
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 13px;
+}
+
+.register-manager-message strong {
+  font-size: 12px;
+}
+
+.register-manager-message span {
+  line-height: 1.5;
+}
+
+.register-manager-success {
+  background: #edf8ef;
+  border: 1px solid #c9e6d1;
+  border-left: 5px solid #2f7b45;
+  color: #25653a;
+}
+
+.register-manager-error {
+  background: #fff0f0;
+  border: 1px solid #e1b6b6;
+  border-left: 5px solid #a62a2a;
+  color: #8f1d1d;
+}
+
+.register-manager-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 16px;
+}
+
+.register-manager-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-manager-field label {
+  margin-bottom: 7px;
+  color: #684535;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.register-manager-field input {
+  width: 100%;
+  min-height: 47px;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d8c2ad;
+  border-radius: 10px;
+  background: #fff;
+  color: #4d3022;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.register-manager-field input::placeholder {
+  color: #aa9382;
+}
+
+.register-manager-field input:focus {
+  border-color: #8f1d1d;
+  box-shadow: 0 0 0 3px rgba(143, 29, 29, 0.1);
+}
+
+.register-manager-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.register-manager-primary,
+.register-manager-secondary {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.register-manager-primary {
+  flex: 1;
+  border: none;
+  background: linear-gradient(135deg, #8f1d1d, #a62a2a);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(95, 20, 20, 0.16);
+}
+
+.register-manager-primary:hover {
+  background: #741515;
+}
+
+.register-manager-secondary {
+  min-width: 110px;
+  border: 1px solid #cdb7a2;
+  background: #fff;
+  color: #6d4634;
+}
+
+.register-manager-secondary:hover {
+  background: #f5ebe1;
+}
+
+.register-manager-security {
+  margin-top: 24px;
+  padding: 14px 15px;
+  background: #f7eee5;
+  border: 1px solid #eadbca;
+  border-radius: 11px;
+}
+
+.register-manager-security strong {
+  display: block;
+  color: #721414;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.register-manager-security p {
+  margin: 0;
+  color: #806656;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .register-manager-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .register-manager-badge {
+    align-self: flex-start;
+  }
+
+  .register-manager-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-manager-header {
+    padding: 22px;
+  }
+
+  .register-manager-header h2 {
+    font-size: 23px;
+  }
+
+  .register-manager-card {
+    padding: 20px;
+  }
+
+  .register-manager-actions {
+    flex-direction: column;
+  }
+
+  .register-manager-primary,
+  .register-manager-secondary {
+    width: 100%;
+  }
+}
